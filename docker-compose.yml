@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  currency-exchange:
+    image: dexgk/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+    mem_reservation: 700m
+    ports:
+      - "8088:8080"
+    networks:
+      - currency-network
+networks:
+  currency-network:
